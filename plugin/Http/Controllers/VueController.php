@@ -10,12 +10,14 @@ class VueController extends Controller
     public function index()
     {
         return garden()->view('vue.index')
-            ->withAdminStyles('material-icons')
+            // Styles
+            ->withAdminStyles('google-fonts')
+            ->withAdminStyles('materialdesignicons.min')
             ->withAdminStyles('vuetify.min')
-            ->withAdminScripts('vue.min')
-            ->withAdminScripts('vuetify.min')
-            ->withAdminScripts('httpVueLoader')
-            ->withAdminScripts('vue-router')
+
+            // Scripts
+            ->withAdminScripts('vue')
+            ->withAdminScripts('vuetify')
             ->withAdminScripts('vue-script');
     }
 

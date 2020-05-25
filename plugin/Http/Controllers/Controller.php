@@ -11,4 +11,14 @@ abstract class Controller extends BaseController {
         return garden()->getBaseUri() . "/public/";
     }
 
+    public function addJs()
+    {
+        return 'addJs';
+    }
+
+    public function addCss()
+    {
+        return 'addCss';
+    }
+
 }
