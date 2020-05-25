@@ -1,5 +1,6 @@
-
 <div class="container">
     <h1>Vue</h1>
-    <?php dump( $this ) ?>
+    
 </div>
+
+<div id="app" v-cloak></div>
