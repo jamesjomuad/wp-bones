@@ -18,6 +18,7 @@ class VueController extends Controller
             // Scripts
             ->withAdminScripts('vue')
             ->withAdminScripts('vuetify')
+            ->withAdminScripts('require')
             ->withAdminScripts('vue-script');
     }
 

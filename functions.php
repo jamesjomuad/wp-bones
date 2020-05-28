@@ -18,20 +18,3 @@ if ( ! function_exists('d') ) {
     }
 
 }
-
- 
-// add_action('admin_init', function(){
-//     wp_enqueue_style('fontawesome', '/wp-content/plugins/garden/public/css/fontawesome/css/all.min.css');
-// });
-
-
-// add_action('admin_head', function() {
-//     echo '<style type="text/css" media="screen">
-//     #adminmenu .menu-icon-cars div.wp-menu-image:before {
-//         font-family: "Font Awesome 5 Free" !important;
-//         content: "\\f1b9";
-//         font-style: normal;
-//         font-weight: 900;
-//     }
-//     </style>';
-// });

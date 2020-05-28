@@ -1,42 +1,41 @@
-<!--
- |
- | In $plugin you'll find an instance of Plugin class.
- | If you'd like can pass variable to this view, for example:
- |
- | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
- |
--->
+<div id="app" v-cloak>
+    <v-app>
+        <v-card tile class="m-6">
+            <v-app-bar dark color="green accent-3">
+                <v-toolbar-title>My Garden</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-text-field hide-details single-line></v-text-field>
+                <v-btn icon>
+                    <v-icon>mdi-magnify</v-icon>
+                </v-btn>
+                <v-btn icon @click="grid = !grid">
+                    <v-icon v-if="grid">mdi-apps</v-icon>
+                    <v-icon v-if="!grid">mdi-format-list-bulleted-square</v-icon>
+                </v-btn>
+            </v-app-bar>
 
-<div class="garden wrap">
-    <h1>Collections</h1>
+            <v-container>
+                <v-row dense>
+                    <v-col v-for="(item, i) in plants" :key="i" :cols="grid ? '3' : '12'">
+                        <v-card :color="item.color || '#385F73'" dark>
+                            <div class="d-flex flex-wrap justify-space-between">
+                                <div>
+                                    <v-card-title class="headline" v-text="item.title"></v-card-title>
+                                    <v-card-subtitle v-text="item.description"></v-card-subtitle>
+                                </div>
 
-    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-        <strong class="font-bold">Holy smokes!</strong>
-        <span class="block sm:inline">Something seriously bad happened.</span>
-        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-            <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20">
-                <title>Close</title>
-                <path
-                    d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-            </svg>
-        </span>
-    </div>
+                                <v-avatar class="ma-3" size="125" tile>
+                                    <v-img :src="item.src"></v-img>
+                                </v-avatar>
 
-    <div class="bg-indigo-900 text-center py-4 lg:px-4">
-        <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
-            role="alert">
-            <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
-            <span class="font-semibold mr-2 text-left flex-auto">Get the coolest t-shirts from our brand new
-                store</span>
-            <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
-                </svg>
-        </div>
-    </div>
-
-    <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
-        <p class="font-bold">Be Warned</p>
-        <p>Something not ideal might be happening.</p>
-    </div>
+                                <v-card-actions>
+                                    <v-btn text>Show</v-btn>
+                                </v-card-actions>
+                            </div>
+                        </v-card>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-card>
+    </v-app>
 </div>
