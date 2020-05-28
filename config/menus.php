@@ -32,9 +32,9 @@ return [
                 'capability' => 'read',
                 'route' => ['get' => 'ComponentController@index'],
             ],
-            'vue' => [
-                "page_title" => "Vue",
-                "menu_title" => "Vue",
+            'vuetify' => [
+                "page_title" => "Vuetify",
+                "menu_title" => "Vuetify",
                 'capability' => 'read',
                 'route' => ['get' => 'VueController@index'],
             ]
