@@ -7,34 +7,19 @@ use garden\Http\Controllers\Controller;
 class CollectionController extends Controller
 {
 
-  public function index()
-  {
-    return garden()->view( 'collection.index' )
-      // Styles
-      ->withAdminStyles('google-fonts')
-      ->withAdminStyles('materialdesignicons.min')
-      ->withAdminStyles('vuetify.min')
-      ->withAdminStyles('collection')
+    public function index()
+    {
+        return garden()->view( 'collection.index' )
+        // Styles
+        ->withAdminStyles('google-fonts')
+        ->withAdminStyles('materialdesignicons.min')
+        ->withAdminStyles('vuetify.min')
+        ->withAdminStyles('collection')
 
-      // Scripts
-      ->withAdminScripts('vue')
-      ->withAdminScripts('vuetify')
-      ->withAdminScripts('collection');
-  }
-
-  public function store()
-  {
-    // POST
-  }
-
-  public function update()
-  {
-    // PUT AND PATCH
-  }
-
-  public function destroy()
-  {
-    // DELETE
-  }
+        // Scripts
+        ->withAdminScripts('vue')
+        ->withAdminScripts('vuetify')
+        ->withAdminScripts('collection');
+    }
 
 }

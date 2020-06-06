@@ -1,3 +1,5 @@
+<?php
+/*
 <div id="app" v-cloak>
     <v-app>
         <v-card tile class="m-6">
@@ -39,3 +41,6 @@
         </v-card>
     </v-app>
 </div>
+*/ ?>
+
+<div id="vApp"></div>

@@ -27,8 +27,8 @@ return [
                 ],
             ],
             'components' => [
-                "page_title" => "Components",
-                "menu_title" => "Components",
+                "page_title" => "Tailwindcss",
+                "menu_title" => "Tailwindcss",
                 'capability' => 'read',
                 'route' => ['get' => 'ComponentController@index'],
             ],
